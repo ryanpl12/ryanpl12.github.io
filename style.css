@@ -6,6 +6,13 @@
 
 body {
     background-color: #000; /* Sets the entire page background to black */
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('pageBack.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* This keeps the background stationary during scrolling */
+    color: #fff; /* Ensures text color is white for better readability */
+    font-family: 'Arial', sans-serif;
+
 }
 
 .banner {
@@ -55,7 +62,7 @@ body {
     content: '';
     height: 3px;
     width: 0%;
-    background: #960000;
+    background: #6f7171;
     position: absolute;
     left: 0;
     bottom: -10px;
@@ -90,8 +97,9 @@ body {
     line-height: 25px;
 }
 
-.projects-content ul {
-    list-style-type: none; /* Removes default list styling */
+.projects-content ol {
+    list-style-type:disc; /* Removes default list styling */
+    list-style-position: inside;
     padding: 0;
 }
 
@@ -101,12 +109,17 @@ body {
     margin-top: 20px; /* Adds spacing above the image */
 }
 .resume-content {
-    background-color: #000; /* Ensures consistency with the black background */
+     /* Ensures consistency with the black background */
     color: #fff;
     font-family: 'Arial', sans-serif; /* Keeps the unique font for text */
     padding: 20px;
     margin-top: 20px; /* Adds spacing from the navbar */
     text-align: center;
+}
+.resume-content ol {
+    list-style-type:disc; /* Removes default list styling */
+    list-style-position: inside;
+    padding: 0;
 }
 
 .resume-content h1, .resume-content h2 {
@@ -124,7 +137,7 @@ body {
     left: 60px; /* Adjust to align under the logo as needed */
 }
 .bio-content {
-    background-color: #000; /* Keeps background consistent */
+    background-color: #00000000; /* Keeps background consistent */
     color: #fff;
     font-family: 'Arial', sans-serif;
     padding: 20px;
@@ -141,5 +154,17 @@ body {
     height: 450px; /* Fixed height, adjust as necessary */
     max-width: 560px; /* Maximum size */
 }
-
-
+.personal-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #000; /* Adjust if you want a different background */
+}
+.personal-info img {
+    max-width: 200px; /* Adjust this value to make the image smaller or larger */
+    height: auto; /* Maintains the aspect ratio */
+    border-radius: 50%; /* Keeps the circular shape if desired */
+    margin-bottom: 20px; /* Adds spacing between the image and the description */
+}
