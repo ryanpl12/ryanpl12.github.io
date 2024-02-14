@@ -6,6 +6,13 @@
 
 body {
     background-color: #000; /* Sets the entire page background to black */
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('pageBack.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* This keeps the background stationary during scrolling */
+    color: #fff; /* Ensures text color is white for better readability */
+    font-family: 'Arial', sans-serif;
+
 }
 
 .banner {
@@ -55,7 +62,7 @@ body {
     content: '';
     height: 3px;
     width: 0%;
-    background: #960000;
+    background: #6f7171;
     position: absolute;
     left: 0;
     bottom: -10px;
@@ -91,7 +98,8 @@ body {
 }
 
 .projects-content ul {
-    list-style-type: none; /* Removes default list styling */
+    list-style-type:disc; /* Removes default list styling */
+    list-style-position: inside;
     padding: 0;
 }
 
@@ -101,13 +109,26 @@ body {
     margin-top: 20px; /* Adds spacing above the image */
 }
 .resume-content {
-    background-color: #000; /* Ensures consistency with the black background */
+     /* Ensures consistency with the black background */
     color: #fff;
     font-family: 'Arial', sans-serif; /* Keeps the unique font for text */
     padding: 20px;
     margin-top: 20px; /* Adds spacing from the navbar */
     text-align: center;
 }
+.resume-content {
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.resume-content ol {
+    list-style-type: disc;
+    list-style-position: inside; /* Moves the list markers inside the content area */
+}
+
 
 .resume-content h1, .resume-content h2 {
     font-weight: bold;
@@ -124,12 +145,21 @@ body {
     left: 60px; /* Adjust to align under the logo as needed */
 }
 .bio-content {
-    background-color: #000; /* Keeps background consistent */
+    background-color: #00000000; /* Transparent background */
     color: #fff;
     font-family: 'Arial', sans-serif;
     padding: 20px;
-    text-align: center; /* Centers the text */
+    text-align:center; /* Aligns text to the left for a more traditional reading format */
+    line-height: 1.6; /* Increases line height for better readability */
+    margin: 20px auto; /* Adds some margin around the text for spacing */
+    max-width: 800px; /* Sets a max width to prevent lines from becoming too long on wider screens */
 }
+
+.bio-content p {
+    margin-bottom: 20px; /* Adds more space between paragraphs */
+    text-align:center; /* Justifies the text for a neat, aligned appearance on both sides */
+}
+
 
 .video-container {
     margin-top: 20px; /* Adds some space above the video */
@@ -141,5 +171,17 @@ body {
     height: 450px; /* Fixed height, adjust as necessary */
     max-width: 560px; /* Maximum size */
 }
-
-
+.personal-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #000; /* Adjust if you want a different background */
+}
+.personal-info img {
+    max-width: 200px; /* Adjust this value to make the image smaller or larger */
+    height: auto; /* Maintains the aspect ratio */
+    border-radius: 50%; /* Keeps the circular shape if desired */
+    margin-bottom: 20px; /* Adds spacing between the image and the description */
+}
