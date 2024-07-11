@@ -1,20 +1,22 @@
+/* Global reset for margin, padding, and font-family to ensure consistency across all elements */
 * {
     margin: 0;
     padding: 0;
     font-family: 'Times New Roman', Times, serif;
 }
 
+/* Body style defines the global font family, background properties, and text color */
 body {
-    background-color: #000; /* Sets the entire page background to black */
+    background-color: #000;
     background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('pageBack.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* This keeps the background stationary during scrolling */
-    color: #fff; /* Ensures text color is white for better readability */
+    background-attachment: fixed;
+    color: #fff;
     font-family: 'Arial', sans-serif;
-
 }
 
+/* Styling for the main banner area */
 .banner {
     width: 100%;
     height: 100vh;
@@ -22,7 +24,9 @@ body {
     background-size: cover;
     background-position: center;
 }
-.page-banner{
+
+/* Styling for page banners, similar to .banner but may use a different background image */
+.page-banner {
     background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('pageBack.jpg');
     width: 100%;
     height: 100vh;
@@ -30,7 +34,7 @@ body {
     background-position: center;
 }
 
-
+/* Navbar styles including layout, spacing, and alignment */
 .navbar {
     width: 85%;
     margin: auto;
@@ -40,11 +44,13 @@ body {
     justify-content: space-between;
 }
 
+/* Logo styling within the navbar */
 .logo {
     width: 120px;
     cursor: pointer;
 }
 
+/* List item styling within the navbar */
 .navbar ul li {
     list-style: none;
     display: inline-block;
@@ -52,12 +58,14 @@ body {
     position: relative;
 }
 
+/* Anchor link styling within navbar list items */
 .navbar ul li a {
     text-decoration: none;
     color: #fff;
     text-transform: uppercase;
 }
 
+/* Underline effect for navbar items on hover */
 .navbar ul li::after {
     content: '';
     height: 3px;
@@ -69,16 +77,19 @@ body {
     transition: 0.5s;
 }
 
+/* Expands the underline effect on hover for navbar items */
 .navbar ul li:hover::after {
     width: 100%;
 }
 
+/* Common font styling for content sections */
 .content, .projects-content {
-    color: #fff;
-    font-family: 'Arial', sans-serif; /* Example of a unique font for projects content */
+    font-family: 'Arial', sans-serif; 
     text-align: center;
+    color: #fff;
 }
 
+/* Absolute positioning for content within the banner */
 .content {
     width: 100%;
     position: absolute;
@@ -86,90 +97,141 @@ body {
     transform: translateY(-50%);
 }
 
+/* Header font size within the content section */
 .content h1 {
     font-size: 70px;
     margin-top: 80px;
 }
 
+/* Paragraph and list item styling within content and projects sections */
 .content p, .projects-content p, .projects-content li {
     margin: 20px auto;
     font-weight: 100;
     line-height: 25px;
 }
 
+/* Styling for unordered list within projects content */
 .projects-content ul {
-    list-style-type:disc; /* Removes default list styling */
+    list-style-type: disc; 
     list-style-position: inside;
     padding: 0;
 }
 
+/* Image styling within project image sections */
 .project-image img {
     max-width: 100%;
     height: auto;
-    margin-top: 20px; /* Adds spacing above the image */
-}
-.resume-content {
-     /* Ensures consistency with the black background */
-    color: #fff;
-    font-family: 'Arial', sans-serif; /* Keeps the unique font for text */
-    padding: 20px;
-    margin-top: 20px; /* Adds spacing from the navbar */
-    text-align: center;
-}
-.resume-content {
-    color: #fff;
-    font-family: 'Arial', sans-serif;
-    padding: 20px;
-    margin-top: 20px;
-    text-align: center;
+    margin-top: 20px; 
 }
 
+/* Resume content specific styling */
+.resume-content {
+    text-align: center;
+    color: #fff;
+    font-family: 'Arial', sans-serif; 
+    padding: 20px;
+    margin-top: 20px; 
+}
+
+/* Ordered list styling within resume content for readability */
 .resume-content ol {
     list-style-type: disc;
-    list-style-position: inside; /* Moves the list markers inside the content area */
+    list-style-position: inside; 
 }
 
-
+/* Header styling for emphasis within resume content */
 .resume-content h1, .resume-content h2 {
     font-weight: bold;
 }
 
+/* Paragraph margin adjustment within resume content for spacing */
 .resume-content p {
     margin: 10px 0;
 }
+
+/* Styling for profile picture within a specific section */
 .profile-pic {
-    width: 200px; /* Adjust based on your image's size */
-    height: auto; /* Maintain aspect ratio */
+    width: 200px; 
+    height: auto; 
     position: absolute;
-    top: 120px; /* Adjust based on the height of your navbar */
-    left: 60px; /* Adjust to align under the logo as needed */
+    top: 120px; 
+    left: 60px; 
 }
+
+/* Background, color, and font styling for biography content */
 .bio-content {
-    background-color: #00000000; /* Transparent background */
+    background-color: #00000000; 
     color: #fff;
     font-family: 'Arial', sans-serif;
     padding: 20px;
-    text-align:center; /* Aligns text to the left for a more traditional reading format */
-    line-height: 1.6; /* Increases line height for better readability */
-    margin: 20px auto; /* Adds some margin around the text for spacing */
-    max-width: 800px; /* Sets a max width to prevent lines from becoming too long on wider screens */
+    text-align: center; 
+    line-height: 1.6; 
+    margin: 20px auto; 
+    max-width: 800px; 
 }
 
+/* Margin adjustment for paragraphs within biography content */
 .bio-content p {
-    margin-bottom: 20px; /* Adds more space between paragraphs */
-    text-align:center; /* Justifies the text for a neat, aligned appearance on both sides */
+    margin-bottom: 20px; 
 }
 
-
+/* Container styling for video embedding, ensuring center alignment */
 .video-container {
-    margin-top: 20px; /* Adds some space above the video */
-    text-align: center; /* Ensures the video is centered */
+    margin-top: 20px; 
+    text-align: center; 
 }
 
+/* Styling for iframe within video container for responsive design */
 .video-container iframe {
-    width: 80%; /* Responsive width */
-    height: 450px; /* Fixed height, adjust as necessary */
-    max-width: 560px; /* Maximum size */
+    width: 80%; 
+    height: 450px; 
+    max-width: 560px; 
 }
 
+/* Flexbox styling for personal info section for alignment and spacing */
+.personal-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #000; 
+}
 
+/* Image styling within personal info, including rounded corners */
+.personal-info img {
+    max-width: 200px; 
+    height: auto; 
+    border-radius: 50%; 
+    margin-bottom: 20px; 
+}
+
+/* Text alignment and width control for personal description */
+.personal-description {
+    text-align: center; 
+    color: #fff; 
+    max-width: 50%; 
+    margin: auto; 
+}
+
+/* Hobbies content styling for text alignment and spacing */
+.hobbies-content {
+    text-align: center; 
+    color: #fff; 
+    font-family: 'Arial', sans-serif; 
+    padding: 20px; 
+    margin-top: 20px; 
+}
+
+/* Unordered list styling within hobbies content */
+.hobbies-content ul {
+    list-style-type: disc; 
+    list-style-position: inside;
+    padding: 0;
+}
+
+/* List item font size adjustment within hobbies content */
+.hobbies-content li {
+    margin: 10px 0; 
+    font-size: larger;
+}
